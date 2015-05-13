@@ -1,0 +1,3 @@
+Electricity_Coal <- data.frame(fromJSON(getURL(URLencode('129.152.144.84:5001/rest/native/?query="select e.Country, \\"2008\\", COAL_MILLION_TONS_2008 from ElectricityGeneration e join CoalReserves c on e.Country = c.COUNTRY"'),httpheader=c(DB='jdbc:oracle:thin:@129.152.144.84:1521:ORCL', USER='C##cs329e_np6593', PASS='orcl_np6593', MODE='native_mode', MODEL='model', returnDimensions = 'False', returnFor = 'JSON'), verbose = TRUE))); head(Electricity_Coal)
+
+colnames(Electricity_Coal) <- c("Region", "El_Gen_Billion_Kilowatthours", "Coal_Reserve_Million_Tons")

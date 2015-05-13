@@ -1,0 +1,1 @@
+p = ggplot(Wrangling, aes(x=factor(1), y=Coal, fill=(Type))) + geom_bar(stat = "identity") + facet_grid(facets=. ~ Region) + coord_polar(theta="y") + xlab('') + ylab(''); p

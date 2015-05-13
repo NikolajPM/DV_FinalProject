@@ -1,0 +1,1 @@
+p  %>% ggplot(aes(x = year, y = hous_perc, color = year)) +  geom_jitter(aes(shape=HHTYP, size = hous_perc)) + scale_colour_tableau() + ggtitle("United Kingdom's Internet Usage") + theme(plot.title=element_text(size=20, face="bold", vjust=2))
